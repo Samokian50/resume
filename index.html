@@ -3,389 +3,417 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Swapnil Jadhav Resume</title>
+        <title>Swapnil Jadhav Profile</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <style>
-           
-            
-            .tbdr{
-                border: 1px dashed black;
-            }
-            body{
 
-                text-align: justify;
-            }
+          body{
+            background-image:linear-gradient(to left,#6a2c70e2, #b83b5fd7, #f0895dc8);
+            background-repeat: no-repeat;
+            background-size:contain;
+            position: relative;
+          }
 
-           
-             div > .mt-4:hover{
-                
-                box-shadow: 0px 0px 10px #000;
-                background: linear-gradient(45deg,#f36f033d, #ecf0053d);
-                color: #030e61;
-                border-radius: 10px;
-                transition: all 0.1s linear;
-               
-                padding: 2%;
-                font-weight: bold;
-                /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
-
-                h6{
-                        color: #660404;
-                        font-size: 24px;
-                        text-align: center;
+          .s_title {
+                  position: relative;
+                  color: #262626 !important;
+                  
+                  
                 }
+                
+                .s_title:before {
+                  background-image: linear-gradient(to left ,#F08A5D,#B83B5E, #6A2C70);
+                  color: white;
+                  content: 'JADHAV';
+                  overflow: hidden;
+                  position: absolute;  
+                  top: 0;  
+                  left: 0;
+                  
+                    -webkit-clip-path: polygon(0% 0% , 30% 0%, 30% 100%, 0% 100%);  
+                  clip-path: polygon(0% 0% , 30% 0%, 30% 100%, 0% 100%);
+                  animation: slide 4s 1s linear infinite; 
+                } 
+                          
+                @keyframes slide {      
+                  50% {     
+                    -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
+                  } 
+                }  
+
+               
+            
+           
+              .nav-link{
+                color: #fff;
+                display: block;
+                position: relative;
+                padding: 20px 20px 10px;
+              }
+           
+           .nav-link:before, .nav-link:after {
+              content: "";
+              bottom: 0;
+              width: 0px;
+              height: 2px;
+              display: block;
+              position: absolute;
+              background-color: #fff;
+              -webkit-transition: all 0.3s ease-in-out;
+                      transition: all 0.3s ease-in-out;  
             }
-            ul >li {
-                margin-top: 10px;
+
+            .nav-link:before { right: 50%;  }
+            .nav-link:after { left: 50%; }
+
+            .nav-link:hover:before , .nav-link:hover:after {
+              width: 50%;
+              border-top: 2px solid #fff;
             }
-            th, td {
-                    padding: 10px;
-            }
-            body{
-                border: 3px solid black;
-                margin: 0px 30px;
-            }
-        </style>
+
+.s_toggle_switch {
+  cursor: pointer;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  width: 30px;
+  
+  
+
+  .s_toggle_switch__line{
+    background-color: #fff;
+    border-radius: 3px;
+    height: 3px;
+    position: absolute;
+    transition-duration: 200ms;
+    transition: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    width: 100%;
+  }
+
+  .s_toggle_switch__line:nth-child(1) {
+    left: 0px;
+    top: 0px;
+    transition-duration: 200ms;
+  }
+
+  .s_toggle_switch__line:nth-child(2) {
+    left: 0px;
+    opacity: 1;
+    top: 15px;
+  }
+
+  .s_toggle_switch__line:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+    transition-duration: 200ms;
+  }
+
+  &.open .s_toggle_switch__line:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+    transition-duration: 200ms;
+  }
+
+  &.open .s_toggle_switch__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open .s_toggle_switch__line:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+    transition-duration: 100ms;
+  }
+}
+
+.container {
+  height: 300px;
+  
+
+  .box {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      width: 120%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 50px;
+
+      .block {
+        width: 0%;
+        height: inherit;
+        background: #f9e400;
+        position: absolute;
+        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+      }
+
+      h1 {
+        font-family: 'Poppins';
+        color: #fff;
+        font-size: 40px;
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+        display: flex;
+        align-items: baseline;
+        position: relative;
         
+
+        span {
+          width:0px;
+          height: 0px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          background: #f9e400;
+          -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation: popIn 1s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation-delay: 2s;
+          margin-left: 5px;
+          margin-top: -10px;
+          position: absolute;
+          bottom: 13px;
+          right: -12px;
+
+        }
+      }
+    }
+
+    .role {
+      width: 150%;
+      position: relative;
+      display: flex;
+      align-items: start;
+      height:100px;
+      
+
+      .block {
+        width: 0%;
+        height:inherit;
+        background:#f6fe00;
+        position: absolute;
+        animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation-delay: 2s;
+      
+      }
+
+      .subgroup {
+        animation: secFadeIn 2s forwards;
+        animation-delay: 3.2s;
+        opacity: 0;
+         font-weight: 400;
+        font-family: 'Lato';
+        color: #ffffff;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+
+
+
+
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #F9E400;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background:#F9E400;
+    opacity: 1;
+    bottom: 45px;
+  }
+   65% {
+      width: 7px;
+    height: 7px;
+      bottom: 0px;
+      width: 15px
+   }
+   80% {
+      width: 10px;
+    height: 10px;
+      bottom: 20px
+   }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #F9E400;
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+@keyframes top {
+  0% {
+    opacity: 0;
+     bottom: -80px
+  }
+  100% {
+    opacity: 1;
+     bottom: 0px
+
+  }
+}
+
+@keyframes icon {
+  0% {
+    opacity: 0;
+     transform: scale(0.0);
+  }
+   50% {
+      opacity: 1;
+     transform: scale(1.3) rotate(-02deg);
+   }
+  100% {
+    opacity: 1;
+     bottom: 0px;
+  }
+}
+        </style>
+        <script>
+
+        </script>
     </head>
-
     <body>
-        <header class="container s_header ">
-
-            <div class="d-flex justify-content-center mb-5 fw-bold ">
-                <div class="fw-bold fs-3">
-                    CURRICULUM VITAE 
+        
+        <header class="s_tldr"> 
+          <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+              <h1 class="logo s_title">SWAPNIL</h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span><div class="hamburger s_toggle_switch">
+                  <span class="s_toggle_switch__line"></span>
+                  <span class="s_toggle_switch__line"></span>
+                  <span class="s_toggle_switch__line"></span>
+                </div></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end s_menu" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link s_active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link " href="#">About</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="./resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Plans</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+           
+        </header>   
+        <div class="s_main container-fluid">
+          <div class="container d-flex justify-content-center row">
+            <div class="box">
+                <div class="title col ">
+                    <span class="block"></span>
+                    <h1 class="p-2">SWAPNIL JADHAV<span></span></h1>
                 </div>
-                
-            </div>
-        </header>
-        <div class="s_main container">
-            <div class="mt-4">
-                <h6 class="fw-bold">Mr. Swapnil Babasaheb Jadhav Mobile: +91-9503636778</h5> 
-                <h6 class="fw-bold">E-mail: swapniljadhav0304@hotmail.com </h5>
-                <!-- <h5 class="fw-bold">Aspiring for career enrichment in Pharmaceutical with a Growth Oriented Organization.</h5> -->
-            </div> 
-            <div class="mt-4">
-                <h6>
-                    Designation: - Executive (eLab-Global Quality Control)
-                </h6>
-            </div>
-            <div class="mt-4">       
-                <h6 class="fw-bold">
-                    PROFFESSIONAL EXPERIENCE 8.8 Years
-                </h6>    
-                
-                    <ul>
-                        <li>
-                            UNICHEM LABORATORIES LTD, Goa. From 1st Oct 2015 to 1st Oct 2016. 
-                        </li>
-                        <li>
-                            EMCURE PHARMACEUTICALS LTD, Pune. From 08 Nov 2016 to 15th Oct 2020.  
-                        </li>
-                        <li>
-                            LUPIN PHARMACEUTICALS LTD, Aurangabad. From 28th Oct 2020 to 27 Dec 2021.   
-                        </li>
-                        <li>
-                            APOTEX Research PVT LTD, Vikhroli Mumbai from 17 Jan 2022 till Date   
-                        </li>   
-                        </ul>
-                    
-                
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Responsibilities in current Organization
-                </h6>    
-                    
-                        <ul>
-                            <li>
-                                Create, revise and review specifications LIMS documents (CofA, Test Profiles)] and Analytical Test Methods for solid dosage, liquid dosage and raw material products in the corporate document management system in response to ongoing change control activities to support Global product transfers and apply harmonized testing policies for Apotex laboratories.
-                            </li>
-                            <li>
-                                Perform peer review of documentation and LIMS static data changes for accuracy and compliance with departmental, corporate and regulatory guidelines, and provide feedback as required.
-                            </li>
-                            <li>
-                                Issue document numbers for new specifications and analytical test methods.
-                            </li>
-                            <li>
-                                Route electronic documents through document management and laboratory information management systems to secure history.
-                            </li>
-                            <li>
-                                Review new products and map testing requirements to existing analysis inventory list.
-                            </li>
-                            <li>
-                                Liaise with QC and R&D labs, GIS, Global QC LIMS Business Support, Quality, internal & external consultants on new developments & cross-divisional changes for configuration, code, reports and projects.
-                            </li>
-                            <li>
-                                Evaluate and initiate change controls in support of the creation/revision of specification documents, methods, LIMS master data and LIMS code/configuration.
-                            </li>
-                            <li>
-                                Update appropriate corporate document management and change control systems to reflect revision history for new & revised lab documents.
-                            </li>
-                            <li>
-                                Ensure the timely posting of LIMS CofAs and Test Profiles to the corporate document collections & to external customers as required.
-                            </li>
-                            <li>
-                                Develop & maintain expert working knowledge of LIMS functionality through on-going project implementations.
-                            </li>
-                            <li>
-                                Coordinate tech transfers from R&D to the commercial environment, including management of activities for the creation of Water-mark and release commercial specifications.
-                            </li>
-                            <li>
-                                Ensure timely publishing of all specifications once regulatory NOC approval has been received.  
-                            </li>
-                            <li>
-                                Perform all work in compliance with current SODs, GSOPs & GMPs.
-                            </li>
-                            <li>
-                                Support LIMS projects and initiatives. Represent R&D and QC LIMS static data/document configuration at cross-functional LIMS meetings.
-                            </li>
-                            <li>
-                                Develop and maintain effective working relationships with internal and external customers.
-                            </li>
-                            <li>
-                                Manage hard copies of LIMS impact sheets, peer review forms and verification forms for timely storage and availability.
-                            </li>
-                            <li>
-                                Scheduling and monitoring of LIMS review day to day activities.
-                            </li>
-                        </ul>
-                    
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                        Responsibilities in previous Organization
-                </h6>    
-                    
-                            <ul>
-                                <li>
-                                    Involved in preparation of protocol for OOS, OOT, Laboratory incidence.
-                                </li>
-                                <li>
-                                   Life cycle managment of regulatory documents.
-                                </li>
-                                <li>
-                                    Analysis of Injectable and OSD Finished, In-process drug, Stability and raw material.
-                                </li>
-                                <li>
-                                    Good knowledge of GMP & CGMP, Compliance of reports & records.
-                                </li>
-                                <li>
-                                    Routine Analysis of Assay, RS, Residual Solvents, Container Closer Integrity Test.
-                                </li> 
-                            </ul>
-                            
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Key skill
-                </h6>    
-                    
-                        <ul>
-                            <li>
-                                Labware LIMS specialist for creation of Master Data
-                            </li>
-                            <li>
-                                Trouble Shoot technical Issues for End Users in LIMS
-                            </li>
-                            <li>
-                                Well Trained in Change Control Activities
-                            </li>
-                            <li>
-                                Handled Gas Chromatograph, Ion Chromatograph, Malvern Zeta Sizer, UV, HPLC calibration, troubleshooting, responsible for routine analysis of various Injectable Oncology and OSD products 
-                            </li>
-                            <li>
-                                Good knowledge of chromatography
-                            </li>
-                            <li>
-                                Monitoring and resolving technical issues
-                            </li>
-                            <li>
-                                Technology transfer, Method validation and Verification for Injectables.    
-                            </li>
-                            <li>
-                                Preparation of Injectable and Oral Solid Dossier as per USFDA Regulatory Guidelines
-                            </li>
-                            <li>
-                                Involved in preparation of protocol for OOS, OOT, Laboratory incidence.    
-                            </li>
-                            <li>
-                                Exposures of regulatory audits: - USFDA, ANVISA, TGA, MHRA & WHO    
-                            </li>
-                        </ul>
-                    
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Knowledge of Instruments
-                </h6>    
-                    
-                        <ul>
-                            <li>
-                                HPLC (WATERS AND SHIMADZU)
-                            </li>
-                            <li>
-                                GC (PERKIN ELMER)
-                            </li>
-                            <li>
-                                ION CHROMATOGRAPH (DIONEX)
-                            </li>
-                            <li>
-                                ZETA SIZER (MALVERN)
-                            </li>
-                            <li>
-                                OSMOMETER (LAB INDIA)
-                            </li>
-                            <li>
-                                UV (SHIMADZU)
-                            </li>
-                            
-                        </ul>
-                    
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Software Key Skills
-                </h6>    
-                    
-                        <ul>
-                            <li>
-                                MS-Excel 
-                            </li>
-                            <li>
-                                Computer Fundamentals
-                            </li>
-                            <li>
-                                Adobe Acrobat
-                            </li>
-                            <li>
-                                LIMS labware for Master Data.
-                            </li>
-                            
-                        </ul>
-                    
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Qualification
-                </h6>    
-                    
-                        <ul>
-                            <li>
-                                M. Sc. Medicinal Chemistry (Second class) Pass Out 2015 Dept. of Chemistry (Pune University)
-                            </li>
-                            <li>
-                                B. Sc. Chemistry (First Class) Pass Out 2013 Shree Dnyaneshwar Mahavidyala Newasa (PUNE University)
-                            </li>        
-                        </ul>
-                    
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Personal Information
-                </h6>    
-                <table>
-                        <tr>
-                            <th>
-                                Gender: 
-                            </th>
-                            <td>
-                                Male
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Birth date: 
-                            </th>
-                            <td>
-                                03 Apr.1989
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Marital status: 
-                            </th>
-                            <td>
-                                Married
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Language known: 
-                            </th>
-                            <td>
-                                English, Hindi and Marathi
-                            </td>
-                        </tr>
-                </table>    
-            </div>
-            <div class="mt-4">
-                <h6 class="fw-bold">
-                    Additional information about me
-                </h6>    
-                    
-                        <ul>
-                            <li>Tech Enthusiast
-                                <ul>
-                                    <li class="mb-3">
-                                        Self-trained on software languages like Java, Python, Kotlin now learning frontend Designing and Database Base Management systems like MongoDB, Postgres SQL and creation of Apps.
-                                    </li>
-                                </ul>
-                            </li> 
-                            
-                            <li>Principles Driving me 
-                                <ul>
-                                    <li>
-                                        Continues Improvement
-                                    </li>  
-                                    <li>
-                                        Discipline
-                                    </li>
-                                    <li>
-                                        Loyalty
-                                    </li>     
-                                    <li>
-                                        Accountability
-                                    </li> 
-                                </ul>
-                            </li>        
-                        </ul>
-                    </h5>
+        
+                <div class="role d-flex flex-column">
+                    <div class="block"></div>
+                  <div class="subgroup mb-3">Quality Control Executive by Profession</div>
+                  <div class="subgroup">Developer by Passion </div>
+                </div>
             </div>
         </div>
+        <h1>Under Construction </h1>
+          
+       
+             
+            
+        </div>
         <footer>
-                <div class="container">
-                    <div class="mt-4">
-                        <h6 class="fw-bold">
-                            Address for correspondence
-                        </h6>    
-                            
-                                <ul>
-                                    <p>Viaragar Niwas, Ahilyanagar, Near S.D.M. Collage NewasaTal- Newasa, Dist.- Ahmednagar.</p>
-                                    <p>Pin Code-414603</p>
-                                    <p>Contact number: +91-9503636778</p>
-                                    <p>Email:<a href="#"> Swapniljadhav0304@hotmail.com</a></p>
-                                </ul>
-                            
-                    </div>
-                    <div class="mt-4">
-                        <h6 class="fw-bold">
-                            Declaration
-                        </h6>    
-                            
-                        <ul>
-                            <p>I hereby declare that the above information is true</p>  
-                        </ul>  
-                        <h4 class="text-end fw-bold">Swapnil Jadhav</h4>
-                        <h6 id="sdate" class="text-end"> date</h6>
-                    </div>
-                </div>
-        </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </footer>
+        
         <script>
-            const d = new Date();
-            document.getElementById("sdate").innerHTML = d;
+           const icons = document.querySelectorAll('.hamburger');
+            icons.forEach(icon => {
+            icon.addEventListener('click', (event) => {
+            icon.classList.toggle("open");
+        });
+    });
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
     </body>
 </html>

@@ -9,409 +9,103 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <style>
-
-          body{
-            background-image:linear-gradient(to left,#6a2c70e2, #b83b5fd7, #f0895dc8);
-            background-repeat: no-repeat;
-            background-size:contain;
-            position: relative;
+          .s_tldr{
+            border: 2px dashed black;
           }
-
-          .s_title {
-                  position: relative;
-                  color: #262626 !important;
-                  
-                  
-                }
-                
-                .s_title:before {
-                  background-image: linear-gradient(to left ,#F08A5D,#B83B5E, #6A2C70);
-                  color: white;
-                  content: 'JADHAV';
-                  overflow: hidden;
-                  position: absolute;  
-                  top: 0;  
-                  left: 0;
-                  
-                    -webkit-clip-path: polygon(0% 0% , 30% 0%, 30% 100%, 0% 100%);  
-                  clip-path: polygon(0% 0% , 30% 0%, 30% 100%, 0% 100%);
-                  animation: slide 4s 1s linear infinite; 
-                } 
-                          
-                @keyframes slide {      
-                  50% {     
-                    -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
-                  } 
-                }  
-
-               
-            
-           
-              .nav-link{
-                color: #fff;
-                display: block;
-                position: relative;
-                padding: 20px 20px 10px;
-              }
-           
-           .nav-link:before, .nav-link:after {
-              content: "";
-              bottom: 0;
-              width: 0px;
-              height: 2px;
-              display: block;
-              position: absolute;
-              background-color: #fff;
-              -webkit-transition: all 0.3s ease-in-out;
-                      transition: all 0.3s ease-in-out;  
-            }
-
-            .nav-link:before { right: 50%;  }
-            .nav-link:after { left: 50%; }
-
-            .nav-link:hover:before , .nav-link:hover:after {
-              width: 50%;
-              border-top: 2px solid #fff;
-            }
-
-.s_toggle_switch {
-  cursor: pointer;
-  height: 30px;
-  margin: 0 auto;
-  position: relative;
-  width: 30px;
-  
-  
-
-  .s_toggle_switch__line{
-    background-color: #fff;
-    border-radius: 3px;
-    height: 3px;
-    position: absolute;
-    transition-duration: 200ms;
-    transition: cubic-bezier(0.8, 0.5, 0.2, 1.4);
-    width: 100%;
-  }
-
-  .s_toggle_switch__line:nth-child(1) {
-    left: 0px;
-    top: 0px;
-    transition-duration: 200ms;
-  }
-
-  .s_toggle_switch__line:nth-child(2) {
-    left: 0px;
-    opacity: 1;
-    top: 15px;
-  }
-
-  .s_toggle_switch__line:nth-child(3) {
-    bottom: 0px;
-    left: 0px;
-    transition-duration: 200ms;
-  }
-
-  &.open .s_toggle_switch__line:nth-child(1) {
-    top: 15px;
-    transform: rotate(45deg);
-    transition-duration: 200ms;
-  }
-
-  &.open .s_toggle_switch__line:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open .s_toggle_switch__line:nth-child(3) {
-    top: 15px;
-    transform: rotate(-45deg);
-    transition-duration: 100ms;
-  }
-}
-
-.container {
-  height: 300px;
-  
-
-  .box {
-    width: 350px;
-    height: 200px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    .title {
-      width: 120%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: 50px;
-
-      .block {
-        width: 0%;
-        height: inherit;
-        background: #f9e400;
-        position: absolute;
-        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-      }
-
-      h1 {
-        font-family: 'Poppins';
-        color: #fff;
-        font-size: 40px;
-        -webkit-animation: mainFadeIn 2s forwards;
-        -o-animation: mainFadeIn 2s forwards;
-        animation: mainFadeIn 2s forwards;
-        animation-delay: 1.6s;
-        opacity: 0;
-        display: flex;
-        align-items: baseline;
-        position: relative;
-        
-
-        span {
-          width:0px;
-          height: 0px;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%;
-          background: #f9e400;
-          -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
-          animation: popIn 1s cubic-bezier(.74, .06, .4, .92) forwards;
-          animation-delay: 2s;
-          margin-left: 5px;
-          margin-top: -10px;
-          position: absolute;
-          bottom: 13px;
-          right: -12px;
-
+          .s_hero{
+            background-image:linear-gradient(to left, #8be3ff,#0856b5, #053a69) ;
+            color: #E2E2B6;
+          }
+          .sectionClass {
+            padding: 80px 0px 50px 0px;
+            position: relative;
+            display: block;
+            background: rgb(249, 249, 249);
         }
-      }
-    }
+            .s_row {
+                width: 980px;
+                height: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+              }
 
-    .role {
-      width: 150%;
-      position: relative;
-      display: flex;
-      align-items: start;
-      height:100px;
-      
-
-      .block {
-        width: 0%;
-        height:inherit;
-        background:#f6fe00;
-        position: absolute;
-        animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-        animation-delay: 2s;
-      
-      }
-
-      .subgroup {
-        animation: secFadeIn 2s forwards;
-        animation-delay: 3.2s;
-        opacity: 0;
-         font-weight: 400;
-        font-family: 'Lato';
-        color: #ffffff;
-        font-size: 15px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-      }
-    }
-  }
-}
-
-
-
-
-
-@keyframes mainBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-  50% {
-    width: 100%;
-    left: 0;
-
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes secBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-  50% {
-    width: 100%;
-    left: 0;
-
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes mainFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-@keyframes popIn {
-  0% {
-    width: 0px;
-    height: 0px;
-    background: #F9E400;
-    border: 0px solid #ddd;
-    opacity: 0;
-  }
-  50% {
-    width: 10px;
-    height: 10px;
-    background:#F9E400;
-    opacity: 1;
-    bottom: 45px;
-  }
-   65% {
-      width: 7px;
-    height: 7px;
-      bottom: 0px;
-      width: 15px
-   }
-   80% {
-      width: 10px;
-    height: 10px;
-      bottom: 20px
-   }
-  100% {
-    width: 7px;
-    height: 7px;
-    background: #F9E400;
-    border: 0px solid #222;
-    bottom: 13px;
-
-  }
-}
-
-@keyframes secFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
-
-@keyframes top {
-  0% {
-    opacity: 0;
-     bottom: -80px
-  }
-  100% {
-    opacity: 1;
-     bottom: 0px
-
-  }
-}
-
-@keyframes icon {
-  0% {
-    opacity: 0;
-     transform: scale(0.0);
-  }
-   50% {
-      opacity: 1;
-     transform: scale(1.3) rotate(-02deg);
-   }
-  100% {
-    opacity: 1;
-     bottom: 0px;
-  }
-}
+          
         </style>
         <script>
+        </script>  
 
-        </script>
+        
     </head>
     <body>
-        
-        <header class="s_tldr"> 
-          <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container-fluid">
-              <h1 class="logo s_title">SWAPNIL</h1>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span><div class="hamburger s_toggle_switch">
-                  <span class="s_toggle_switch__line"></span>
-                  <span class="s_toggle_switch__line"></span>
-                  <span class="s_toggle_switch__line"></span>
-                </div></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end s_menu" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link s_active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link " href="#">About</a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="./resume.html">Resume</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Plans</a>
-                  </li>
-                </ul>
+          <div class="container-fluid ">
+            <nav class="navbar navbar-expand-lg ">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="font-size:50px;">SJ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./resume.html" >Resume</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            </header>
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg s_hero ">
+              <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1 " style= "color: #E2E2B6;">Hi <span style="color: rgb(247, 159, 37);">!</span> I am Swapnil Jadhav</h1>
+                <p class="lead">Quality Control Executive by Profession.</p>
+                <p class="lead">Developer by Passion.</p>
+                
+              </div>
+              <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden d-flex flex-wrap justify-content-end ">
+                  <img class="rounded-lg-3" src="./img/photo.png" alt="" width="200">
+                  
               </div>
             </div>
-          </nav>
-           
-        </header>   
-        <div class="s_main container-fluid">
-          <div class="container d-flex justify-content-center row">
-            <div class="box">
-                <div class="title col ">
-                    <span class="block"></span>
-                    <h1 class="p-2">SWAPNIL JADHAV<span></span></h1>
-                </div>
-        
-                <div class="role d-flex flex-column">
-                    <div class="block"></div>
-                  <div class="subgroup mb-3">Quality Control Executive by Profession</div>
-                  <div class="subgroup">Developer by Passion </div>
-                </div>
-            </div>
-        </div>
-        <a href="./resume.html">Under Construction ,got to resume</a>
-          
-       
-             
-            
-        </div>
-        <footer>
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 mt-lg-2 align-items-center rounded-3 border shadow-lg s_tldr ">
+              <h1>Site is under Construction till then find resume at <a href="./resume.html">Resume</a></h1>
+              <div>
+                <div id="workexperience" class="sectionClass">
+                  <div class="s_row ">
+                    <div class="sectiontitle">
+                      <h2>Work experience</h2>
+                      <span class="headerLine"></span>
+                    </div>
+                    <div class="fullWidth eight columns">
+                      <ul class="cbp_tmtimeline">
+                        <li>
+                          <div class="cbp_tmicon cbp_tmicon-phone">
+                            <i class="faPra fa-briefcase"></i>
+                          </div>
+                          <div class="cbp_tmlabel wow fadeInRight animated">
+                            <h3>Executive </h3>
+                            <div class="date">
+                              <i class="fa fa-calendar"></i>Jan 2022 - Current
+                            </div>
+                            <h4><i class="fa fa-flag"></i>Apotex Vikhroli</h4>
+                            <p class="projectParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit obcaecati ipsa quae, iusto laudantium qui, nisi eum modi perspiciatis quasi facilis corporis iure soluta enim incidunt itaque aspernatur sequi tempora.</p>
+                          </div>
+                        </li>
+              </div>
 
+            </div>
+          </div>
+          
+        
+        <footer>
         </footer>
         
         <script>
-           const icons = document.querySelectorAll('.hamburger');
-            icons.forEach(icon => {
-            icon.addEventListener('click', (event) => {
-            icon.classList.toggle("open");
-        });
-    });
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         
